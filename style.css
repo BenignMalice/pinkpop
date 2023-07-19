@@ -1,0 +1,218 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin-top: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 800px;
+  background-color: black;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+ul {
+  margin: 50px;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 20px;
+  transition: 0.5s;
+}
+
+ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+ul:hover li a {
+  transform: scale(1.5);
+  opacity: 0.2;
+  filter: blur(5px);
+}
+
+ul li a:hover {
+  transform: scale(2);
+  opacity: 1;
+  filter: blur(0);
+  text-decoration: none;
+  color: white;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d592aa;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+ul li a:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.image-container {
+  text-align: center;
+  display: flex;
+}
+
+.image-container img {
+  display: flex;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.welcomeH1 {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.welcomeH1 p {
+  color: white;
+  text-align: center;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  background-color: #231f20;
+  color: #fff;
+  text-align: center;
+  font-size: smaller;
+}
+
+/* Toys for her picture styling */
+#satisfyer img {
+  position: relative;
+  height: 250px;
+  width: auto;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  border: solid 5px #d592aa;
+  border-radius: 5px;
+}
+
+h3 {
+  color: #d592aa;
+}
+
+.pop-animation {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-container {
+  opacity: 0;
+  transform: scale(0);
+  animation: popAnimation 1s ease forwards;
+}
+
+@keyframes popAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pop-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#home-image {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.hide-image {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Loading page styling */
+.loading-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #231f20; /* Background color for the loading animation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-container {
+  position: relative;
+}
+
+.home-image {
+  width: auto; /* Adjust the size of the loading animation image */
+  height: 80%;
+  animation: pop 2s infinite;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
