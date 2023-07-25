@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 800px;
+  padding-bottom: 100px;
   background-color: black;
 }
 
@@ -117,18 +117,55 @@ footer {
   font-size: smaller;
 }
 
-/* Toys for her picture styling */
-#satisfyer img {
-  position: relative;
-  height: 250px;
-  width: auto;
+/* Styling for HER images */
+
+.row {
   display: flex;
-  justify-content: left;
-  align-items: left;
-  border: solid 5px #d592aa;
-  border-radius: 5px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px;
 }
 
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  max-width: 200px;
+  border: 5px solid #d592aa; /* Pink border */
+  border-radius: 20px; /* Rounded corners for the border */
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+  position: relative; /* Add this to enable z-index */
+}
+
+.image-container:last-child {
+  margin-right: 0;
+}
+
+.image-name {
+  text-align: center;
+  font-size: 18px;
+  color: #d592aa;
+}
+/* Animation for image hover */
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.image-container:hover {
+  transform: scale(1.5); /* Increase size on hover */
+  border-width: 5px; /* Increase border width on hover */
+  background-color: black;
+  z-index: 1;
+}
+
+h2 {
+  color: #d592aa;
+}
 h3 {
   color: #d592aa;
 }
@@ -216,3 +253,5 @@ h3 {
     transform: scale(1);
   }
 }
+
+/* Styling for images animation transition */
